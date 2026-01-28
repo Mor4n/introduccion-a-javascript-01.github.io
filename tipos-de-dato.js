@@ -16,6 +16,8 @@ console.log(typeof "Holaaa con una comilla doble"); // string comilla doble
 console.log(typeof 21.32); // positivo con decimal
 console.log(typeof -922.173); // negativo con decimal
 console.log(typeof ""); // comilla doble
-console.log(typeof NaN); //
+console.log(typeof NaN); // not a number o no es un numero
+console.log(typeof 1n); // con el n se hace bigint
+
 let simbolo = Symbol("holaaa soy un simbolo creo");
-console.log(typeof simbolo);
+console.log(typeof simbolo); // simbolo
