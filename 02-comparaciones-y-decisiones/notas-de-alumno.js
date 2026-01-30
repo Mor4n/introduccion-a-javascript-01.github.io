@@ -1,4 +1,5 @@
-let nota = 0;
+let nota = Math.random()*100;
+
 
 if (nota > 0){
 
