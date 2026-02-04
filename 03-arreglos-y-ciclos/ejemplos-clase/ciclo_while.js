@@ -67,3 +67,28 @@ while (j < 5) {
     console.log("Contador: ",j," Hola desde while!");
     j = j + 1; // Aumento del contador
 }
+
+
+// Tip para el uso de While
+
+// Inicio del contador
+let k = 0;
+
+// Siempre se va a ejecutar, es un ciclo infinito por el true
+while(true) {  
+
+    // Si el contador llega a ser igual a 7
+    if(k == 7) {
+        break; // Termina el ciclo,sin esto, va a ser bucle infinito
+    }
+    // Si no es igual a 7, entonces aumenta el contador
+    k = k + 1;
+
+}
+
+// Negación en la condición
+// Este ciclo se ejecuta mientras k sea diferente a 7, 
+// se detiene cuando alcance el valor de 7
+while(k != 7) {
+    k = k + 1;
+}
