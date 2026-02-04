@@ -54,3 +54,16 @@ if(i < 5) {
     console.log("Contador:",i, " Hola");
     i = i + 1; 
 }
+
+
+// Implementación con ciclo while
+console.log("Ahora usando while");
+
+// Inicialización de contador
+let j = 0;
+
+// Si j es menor a 5, entonces ejecuta esto
+while (j < 5) {
+    console.log("Contador: ",j," Hola desde while!");
+    j = j + 1; // Aumento del contador
+}
