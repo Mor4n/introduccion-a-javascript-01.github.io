@@ -54,6 +54,9 @@ https://mor4n.github.io/introduccion-a-javascript-01.github.io/04-funciones/inde
 
 En esta lección pude aprender el como usar las funciones en Javascript, mediante ejemplos que vimos en clase y los retos que nos puso (que fueron algo retadores x-x pero pude aprender mucho!)
 
+Pude aprender también a como ponerles valores por defecto a las funciones, que siento que es algo bastante importante, me lo imagino por ejemplo al momento de registrar un usuario, en el cual, en caso de que el usuario no ingresara un valor, pueda tener un valor por defecto algo para evitar inconsistencia de datos.
+Además de ello, también pude aprender sobre los function declaration, function expression y el hoisting, todo esto lo puse en el archivo de ejemplos-mios.js ;u; espero se pueda entender la explicación más o menos que le puse
+
 Por otro lado, en la práctica 4: declaré primero que nada el arreglo de libros en el scope global para que ambas funciones pudieran acceder y modificar su contenido.
 
 En las funciones, las usé como funciones de flecha o arrow functions para empezar a acostumbrarme a usarlas, en la primer función que fue la de agregar libros, se usó como parametro "título", que vienen siendo los títulos de los libros que añadiríamos al llamar la función.
@@ -66,9 +69,10 @@ Ya en la parte final, se mandó a llamar cada función:
 - agregarLibros("tituloLibro") <- se agregó como parámetro el título del libro para que lo añadiera al arreglo
 - mostrarLibrosLeido() <- se mandó a llamar para que imprimiera en consola todos los titulos de los libros.
 
-
-
 ## Fuentes
 https://www.reddit.com/r/learnprogramming/comments/7r76yn/difference_between_and_in_js/?show=original
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function
+
 
