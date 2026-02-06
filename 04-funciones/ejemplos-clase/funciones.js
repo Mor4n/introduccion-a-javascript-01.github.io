@@ -2,13 +2,14 @@
 
 // Sintaxis general
 
-// Se coloca la palabra clave función, seguido del nombre de la función
-// Luego se colocarán parentesis, colocando los parametros que se usarán
-// En la función, luego de ello se abre llaves para indicar...
+// Se coloca la palabra clave function, seguido del nombre de la función
+// Luego se colocarán parentesis, colocando los parametros que recibirá
+// En la función, luego de ello se abre llaves que contienen el código que ejecutará la función
 function nombre_de_la_funcion(parametro1,parametro2){
     return "Valor a regresar"
 }
 
+/// Llamada a la función con valores reales
 nombre_de_la_funcion("parametro real 1", "parametro real 2");
 
 // Ejemplo: Sumar 2 números

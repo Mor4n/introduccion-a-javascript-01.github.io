@@ -1,8 +1,8 @@
 
 /**
  * Scope:
- * Local:
- * Global
+ * Local: accesible solo dentro de la función donde se declara
+ * Global: accesible en cualquier parte del programa
  */
 
 function escuela(){

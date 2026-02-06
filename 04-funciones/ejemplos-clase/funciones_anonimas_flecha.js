@@ -1,5 +1,5 @@
 
-// Function normal
+// Funcion normal o declaración tradicional
 
 function funcion_normal(a,b){
     return a+b;
