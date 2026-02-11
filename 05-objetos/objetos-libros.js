@@ -4,11 +4,11 @@
 const libro = {
     titulo: "Solanin",
     autor: "Inio Asano",
-    año:2005,
+    anio:2005,
     estado:"disponible",
     capitulos:[],
     describirLibro(){
-        console.log(`Nombre del libro: ${this.titulo}, escrito por ${this.autor}, lanzado el ${this.año}. El estado de este libro es: ${this.estado}.`);
+        console.log(`Nombre del libro: ${this.titulo}, escrito por ${this.autor}, lanzado el ${this.anio}. El estado de este libro es: ${this.estado}.`);
     },
     agregarCapitulo(capitulo){
         this.capitulos.push(capitulo); //Añado con el push que vimos, el capitulo que hayamos pasado al llamar al método
@@ -22,11 +22,11 @@ const libro = {
 const libro2 = {
     titulo: "Vagabond",
     autor: "Takehiko Inoue",
-    año:1998,
+    anio:1998,
     estado:"prestado", 
     capitulos:["01 - Agradecimientos","02 - Introducción a Vagabond","03 - El inicio de la historia"],
     describirLibro(){
-        console.log(`Nombre del libro: ${this.titulo}, escrito por ${this.autor}, lanzado el ${this.año}. El estado de este libro es: ${this.estado}.`);
+        console.log(`Nombre del libro: ${this.titulo}, escrito por ${this.autor}, lanzado el ${this.anio}. El estado de este libro es: ${this.estado}.`);
     },
     agregarCapitulo(capitulo){
         this.capitulos.push(capitulo); 
