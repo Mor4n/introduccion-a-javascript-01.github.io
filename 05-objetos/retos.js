@@ -54,7 +54,7 @@ const tierra = {
         },
     },
     contintentes() {
-        continentes_list = []
+        continentes_list = [];
         for (continente in this.continentes) {
             continentes_list.push(continente)
         }
@@ -63,7 +63,16 @@ const tierra = {
     },
 
     paises() {
+        paises_list = []; // arreglo para guardar los paises
 
+        
+        for (continente in this.continentes) { // primero recorro cada continente
+            for (pais in this.continentes[continente]) { // y ahora voy a acceder a lo que tenga el continente actual (x ejemplo america) al ponerlo dentro del corchete del objeto continentes, que viene siendo el país
+                paises_list.push(pais); // lo agrego al arreglo
+            }
+
+        }
+        console.log(`Paises: ${paises_list}`) // imprimo el arreglo
     },
 
     estados() {
@@ -83,7 +92,7 @@ const tierra = {
  */
 
 
-tierra.continentes();
+tierra.contintentes();
 tierra.paises();
 tierra.estados();
 tierra.ciudades();
