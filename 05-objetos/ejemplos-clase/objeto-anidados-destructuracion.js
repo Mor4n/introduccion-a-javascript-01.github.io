@@ -26,6 +26,7 @@ const persona = {
 const { nombre } = persona;  
 console.log(nombre);
 
+
 // Es equivalente a...
 // const nombre = persona.nombre; // Saca el nombre 
 // console.log(nombre);
