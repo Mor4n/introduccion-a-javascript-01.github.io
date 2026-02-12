@@ -49,7 +49,7 @@ Abra el archivo
 en su navegador y revise la consola para ver los ejemplos y resultados
 
 También puede mirar el código de JavaScript abriendo el archivo
-```objetos.js```
+```objetos-libros.js```
 dentro de su editor de código preferido o dentro de Github.
 
 ## Despliegue
