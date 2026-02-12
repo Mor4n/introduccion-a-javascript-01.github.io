@@ -76,6 +76,27 @@ const tierra = {
     },
 
     estados() {
+        estados_list = [];
+
+        for (continente in this.continentes) {
+            
+            for (pais in this.continentes[continente]) {
+                //Dentro del pais está estados pero también está ciudades en el caso de europa, por eso verifico primero
+                if(this.continentes[continente][pais].estados){
+                    //si entro aquí, quiere decir que pudo acceder a la clave estados
+                    // ahora como solo es un arreglo el que hay, voy a recorrerlo con un for
+                    for (let i = 0; i < this.continentes[continente][pais].estados.length;  i++) {
+                        //agrego al arreglo estados_list el estado del indice accedido 
+                        estados_list.push(this.continentes[continente][pais].estados[i]);
+                        
+                }
+                }
+                
+                
+            }
+            
+        }
+        console.log(`Estados: ${estados_list}`) 
 
     },
 
