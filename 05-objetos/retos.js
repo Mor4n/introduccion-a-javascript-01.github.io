@@ -102,6 +102,24 @@ const tierra = {
 
     ciudades() {
 
+        ciudades_list = [];
+
+        for (continente in this.continentes) {
+            
+            for (pais in this.continentes[continente]) {
+                //esto es como el de estados pero para ciudades ahora
+                if(this.continentes[continente][pais].ciudades){
+                    for (let i = 0; i < this.continentes[continente][pais].ciudades.length;  i++) {
+                        ciudades_list.push(this.continentes[continente][pais].ciudades[i]);
+                        
+                }
+                }
+                
+                
+            }
+            
+        }
+        console.log(`Ciudades: ${ciudades_list}`) 
     },
 };
 /**
