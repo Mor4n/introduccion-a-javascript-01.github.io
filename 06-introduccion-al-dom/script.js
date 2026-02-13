@@ -10,8 +10,16 @@ const boton_enviar = document.querySelector("#boton_enviar"); // boton de enviar
 
 function enviarFormulario (event){
     event.preventDefault(); 
-    console.log(`${nombre.value} - ${comentario.value}`);
+    // console.log(`${nombre.value} - ${comentario.value}`);
 
+    //creo nuevo parrafo
+    const nuevoComentario = document.createElement("p");
+
+    // agrego este texto al parrafo creado
+    nuevoComentario.textContent = `El usuario ${nombre.value} dice: ${comentario.value}`;
+
+    // este elemento lo anexo al body
+    document.body.appendChild(nuevoComentario);
 
 }
 
