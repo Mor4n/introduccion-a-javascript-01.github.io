@@ -34,6 +34,17 @@ function enviarFormulario (event){
 
     borrarComentario.textContent = `Eliminar comentario`
 
+    
+    // funcionalidad de borrar comentario
+    borrarComentario.addEventListener("click",
+        (e) => 
+            {
+            const div_a_borrar = e.target.parentElement;
+            div_a_borrar.remove();
+            }
+    );
+
+
     nuevoComentario.appendChild(borrarComentario);
 
     // este elemento lo anexo al body
@@ -42,3 +53,4 @@ function enviarFormulario (event){
 }
 
 formulario.addEventListener("submit",enviarFormulario);
+

@@ -49,3 +49,5 @@ Se desplegó en Github Pages a partir de este repositorio, puedes ver la página
 
 ## Fuentes:
 https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event
+https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute
+https://developer.mozilla.org/en-US/docs/Web/API/Element/remove
