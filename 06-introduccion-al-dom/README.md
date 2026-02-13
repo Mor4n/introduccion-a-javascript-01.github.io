@@ -45,3 +45,7 @@ Se desplegó en Github Pages a partir de este repositorio, puedes ver la página
 
 
 ## Como conclusión personal:
+
+
+## Fuentes:
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event
