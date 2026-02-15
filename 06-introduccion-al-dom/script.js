@@ -1,9 +1,9 @@
 
 // variables iniciales
 const formulario = document.querySelector("#formulario"); // formulario general
-const nombre = document.querySelector("#nombre"); // input de nombre
-const comentario = document.querySelector("#comentario"); // textarea de comentario
-const boton_enviar = document.querySelector("#boton_enviar"); // boton de enviar
+const nombre = document.querySelector("#input-nombre"); // input de nombre
+const comentario = document.querySelector("#input-comentario"); // textarea de comentario
+const boton_enviar = document.querySelector("#boton-enviar"); // boton de enviar
 
 let idComentario = 0;
 
@@ -14,7 +14,9 @@ function enviarFormulario (event){
 
     // creo un div como contenedor del comentario
     const nuevoComentario = document.createElement("div");
-    
+    // le agrego la clase comentario para editarle el estilo
+    nuevoComentario.setAttribute("class","comentario");
+
     // le agrego el id al comentario
     nuevoComentario.setAttribute("id",idComentario);
     idComentario++; // aumento el contador para el siguiente comentario
@@ -31,6 +33,9 @@ function enviarFormulario (event){
 
     //creo un boton para borrar el comentario
     const borrarComentario = document.createElement("button");
+    // le agrego la clase de boton-eliminar para estilizarlo
+    borrarComentario.setAttribute("class","boton-eliminar");
+
 
     borrarComentario.textContent = `Eliminar comentario`
 

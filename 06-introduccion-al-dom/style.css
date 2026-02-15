@@ -1,41 +1,102 @@
+:root{
+    --fuentePrincipal: "Roboto", sans-serif;
+    --blanco: #e7e9ea;
+    --blanco-hover: #c0c0c0;
+    --fondo: #000000;
+    --eliminar: #f4212e;
+    --eliminar-hover:#b61621;
+}
+
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: var(--fuentePrincipal);
+    font-size: 62.5%;
 }
 
 
 body{
-    background-color: #000000;
+    background-color: var(--fondo);
     margin-top: 2%;
 }
 
 h1{
+    font-size: 4rem;
+    color: var(--blanco);
     margin-bottom: 2%;
     text-align: center;
 }
 #formulario{
+    width: 50%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid gray;
 }
 .label-formulario{
-    font-size: 20px;
+    color: var(--blanco);
+    font-size: 2.5rem;
     margin: 15px;
 }
 
-#nombre{
+#input-nombre{
+    color: var(--blanco);
     width: 300px;
     height: 30px;
     text-align: center;
-    border-radius: 30px;
-    border: 1px solid gray;
+    border: none;
+    font-size: 2rem;
+    background-color: var(--fondo);
+
 }
 
-#comentario{
-    width: 300px;
-    height: 50px;
-    text-align: center;
-    border-radius: 30px;
+#input-comentario{
+    color: var(--blanco);
+    width: 50rem;
+    height: 150px;
+    text-align: start;
+    border: none;
+    background-color: var(--fondo);
+    font-size: 2rem;
+}
+
+#boton-enviar{
+    border-radius: 1rem;
+    font-size:2.5rem;
+    font-weight: bold;
+    align-self: flex-end;
+    border: none;
+    background-color: var(--blanco);
+    border-radius: 100px;
+    padding: 8px 20px;
+    margin: 2%;
+}
+#boton-enviar:hover{
+    cursor: pointer;
+    transition: .10s ease;
+    background-color: var(--blanco-hover);
+}
+
+
+.comentario{
+    margin: 3% 0;
+    display: flex;
+    font-size: 3.3rem;
+    color: var(--blanco);
+    justify-content: space-evenly;
+
+}
+.boton-eliminar{
+    cursor:pointer;
+    border: none;
+    background-color: var(--fondo);
+    color: var(--eliminar);
+    font-weight: bold;
+    font-size: 2rem;
+}
+.boton-eliminar:hover{
+    color: var(--eliminar-hover);
+    transition: .20s ease;
 }
