@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Práctica 06 - Intro al DOM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Práctica 06 - Intro al DOM</h1>
     
     <form id="formulario">
-        <label for="nombre">Nombre de usuario</label>
+        <label for="nombre" class="label-formulario">Nombre de usuario</label>
         <input type="text" id="nombre" placeholder="Ingrese su nombre de usuario">
 
-        <label for="comentario" >Comentario</label>
+        <label for="comentario" class="label-formulario" >Comentario</label>
         <textarea name="text" id="comentario" placeholder="Ingrese su comentario"></textarea>
 
         <button type="submit" id="boton_enviar">Enviar comentario</button>
