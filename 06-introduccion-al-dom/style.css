@@ -2,6 +2,7 @@
     --fuentePrincipal: "Roboto", sans-serif;
     --blanco: #e7e9ea;
     --blanco-hover: #c0c0c0;
+    --gris: #71767b;
     --fondo: #000000;
     --eliminar: #f4212e;
     --eliminar-hover:#b61621;
@@ -64,7 +65,7 @@ h1{
 
 #boton-enviar{
     border-radius: 1rem;
-    font-size:2.5rem;
+    font-size:1.5rem;
     font-weight: bold;
     align-self: flex-end;
     border: none;
@@ -80,21 +81,39 @@ h1{
 }
 
 
-.comentario{
-    margin: 3% 0;
+.contenedor-comentario{
     display: flex;
     font-size: 3.3rem;
-    color: var(--blanco);
-    justify-content: space-evenly;
-
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid var(--gris);
+    padding: 30px 25px;
 }
+
+.texto-comentario{
+    display: flex;
+    flex-direction: column;
+}
+
+.nombre-usuario{
+    color: var(--gris);
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+.texto-comentario{
+    font-size: 2.5rem;
+    color: var(--blanco);
+}
+
+
 .boton-eliminar{
+    margin-left: auto;
     cursor:pointer;
     border: none;
     background-color: var(--fondo);
     color: var(--eliminar);
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 .boton-eliminar:hover{
     color: var(--eliminar-hover);

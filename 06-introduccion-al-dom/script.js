@@ -12,24 +12,36 @@ function enviarFormulario (event){
     event.preventDefault(); 
     // console.log(`${nombre.value} - ${comentario.value}`);
 
-    // creo un div como contenedor del comentario
+    // creo un div como contenedor del comentario, este guardará tanto el texto del comentario, como el botón de eliminar
     const nuevoComentario = document.createElement("div");
-    // le agrego la clase comentario para editarle el estilo
-    nuevoComentario.setAttribute("class","comentario");
+    // le agrego la clase contenedor-comentario para editarle el estilo
+    nuevoComentario.setAttribute("class","contenedor-comentario");
 
     // le agrego el id al comentario
     nuevoComentario.setAttribute("id",idComentario);
-    idComentario++; // aumento el contador para el siguiente comentario
 
-    //creo nuevo parrafo
+    // creo un div texto comentario, aqui es donde voy a guardar el usuario y el contenido del comentario
+    const textoComentario = document.createElement("div");
+    textoComentario.setAttribute("class","texto-comentario");
+
+    // creo el nombre del usuario
+    const nombreComentario = document.createElement("h3");
+    nombreComentario.setAttribute("class","nombre-usuario");
+    nombreComentario.textContent = `@${nombre.value}`;
+
+    //creo un parrafo con el comentario escrito
     const contenidoComentario = document.createElement("p");
+    contenidoComentario.setAttribute("class","texto-comentario");
+    // agrego el texto del input al parrafo recien creado de comentario
+    contenidoComentario.textContent = `${comentario.value}`;
 
-    // agrego este texto al parrafo creado
-    contenidoComentario.textContent = `El usuario ${nombre.value} dice: ${comentario.value}`;
+    // agrego el usuario y el contenido del comentario al contenedor del comentario
+    textoComentario.appendChild(nombreComentario);
+    textoComentario.appendChild(contenidoComentario);
 
-    // agrego el contenido del comentario al contenedor del comentario
+    // y agrego todos estos al contenedor general del comentario,el cual incluirá el botón de eliminar en unos momentos
+    nuevoComentario.appendChild(textoComentario);
 
-    nuevoComentario.appendChild(contenidoComentario);
 
     //creo un boton para borrar el comentario
     const borrarComentario = document.createElement("button");
