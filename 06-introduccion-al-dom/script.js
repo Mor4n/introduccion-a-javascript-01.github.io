@@ -3,10 +3,8 @@
 const formulario = document.querySelector("#formulario"); // formulario general
 const nombre = document.querySelector("#input-nombre"); // input de nombre
 const comentario = document.querySelector("#input-comentario"); // textarea de comentario
-const boton_enviar = document.querySelector("#boton-enviar"); // boton de enviar
 const fotoPerfil = document.querySelector("#input-foto"); // url de foto de perfil
 
-let idComentario = 0;
 
 
 function enviarFormulario (event){
@@ -24,12 +22,9 @@ function enviarFormulario (event){
     imagenPerfil.setAttribute("class","foto-perfil");
     
 
-    // le agrego el id al comentario
-    nuevoComentario.setAttribute("id",idComentario);
-
     // creo un div contenido comentario, aqui es donde voy a guardar el contenido como: usuario, fecha y el texto del comentario
-    const textoComentario = document.createElement("div");
-    textoComentario.setAttribute("class","contenido-comentario");
+    const contenidoComentario = document.createElement("div");
+    contenidoComentario.setAttribute("class","contenido-comentario");
 
     // creo un div usuario-fecha, donde guardaré el nombre de usuario y fecha
     const usuarioFechayHora = document.createElement("div");
@@ -51,20 +46,20 @@ function enviarFormulario (event){
     usuarioFechayHora.appendChild(fechaHora);
 
 
-    //creo un parrafo con el contenido del comentario escrito
-    const contenidoComentario = document.createElement("p");
-    contenidoComentario.setAttribute("class","contenido-comentario");
+    //creo un parrafo con el texto del comentario escrito
+    const textoComentario = document.createElement("p");
+    textoComentario.setAttribute("class","contenido-comentario");
     // agrego el texto del input al parrafo recien creado de comentario
-    contenidoComentario.textContent = `${comentario.value}`;
+    textoComentario.textContent = `${comentario.value}`;
 
     // agrego el usuario-fechayhora y el contenido del comentario al contenedor del comentario, asi el usuario y fecha y hora los puedo estilizar de forma horizontal arriba y que el comentario posteado quede abajo
-    textoComentario.appendChild(usuarioFechayHora);
-    textoComentario.appendChild(contenidoComentario);
+    contenidoComentario.appendChild(usuarioFechayHora);
+    contenidoComentario.appendChild(textoComentario);
 
     // y agrego todos estos al contenedor general del comentario,el cual incluirá el botón de eliminar en unos momentos, entonces será a la izquierda el usuario fecha y hora, teniendo abajo el comentario y a la derecha el botón de eliminar
     nuevoComentario.appendChild(imagenPerfil);
     
-    nuevoComentario.appendChild(textoComentario);
+    nuevoComentario.appendChild(contenidoComentario);
 
 
     //creo un boton para borrar el comentario
