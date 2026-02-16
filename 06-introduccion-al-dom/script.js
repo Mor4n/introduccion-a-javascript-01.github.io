@@ -4,6 +4,7 @@ const formulario = document.querySelector("#formulario"); // formulario general
 const nombre = document.querySelector("#input-nombre"); // input de nombre
 const comentario = document.querySelector("#input-comentario"); // textarea de comentario
 const boton_enviar = document.querySelector("#boton-enviar"); // boton de enviar
+const fotoPerfil = document.querySelector("#input-foto"); // url de foto de perfil
 
 let idComentario = 0;
 
@@ -16,6 +17,12 @@ function enviarFormulario (event){
     const nuevoComentario = document.createElement("div");
     // le agrego la clase contenedor-comentario para editarle el estilo
     nuevoComentario.setAttribute("class","contenedor-comentario");
+
+    
+    const imagenPerfil = document.createElement("img");
+    imagenPerfil.setAttribute("src",fotoPerfil.value || "https://i.pinimg.com/474x/a1/a6/99/a1a6991b3135d3276f89c197b20cc72e.jpg"); // si está vacio entonces que sea esta la foto de perfil por default
+    imagenPerfil.setAttribute("class","foto-perfil");
+    
 
     // le agrego el id al comentario
     nuevoComentario.setAttribute("id",idComentario);
@@ -55,6 +62,8 @@ function enviarFormulario (event){
     textoComentario.appendChild(contenidoComentario);
 
     // y agrego todos estos al contenedor general del comentario,el cual incluirá el botón de eliminar en unos momentos, entonces será a la izquierda el usuario fecha y hora, teniendo abajo el comentario y a la derecha el botón de eliminar
+    nuevoComentario.appendChild(imagenPerfil);
+    
     nuevoComentario.appendChild(textoComentario);
 
 

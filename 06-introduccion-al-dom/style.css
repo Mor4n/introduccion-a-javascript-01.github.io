@@ -42,9 +42,9 @@ h1{
     margin: 15px;
 }
 
-#input-nombre{
+#input-nombre,#input-foto{
     color: var(--blanco);
-    width: 300px;
+    width: 500px;
     height: 30px;
     text-align: center;
     border: none;
@@ -62,6 +62,8 @@ h1{
     background-color: var(--fondo);
     font-size: 2rem;
 }
+
+
 
 #boton-enviar{
     border-radius: 1rem;
@@ -89,6 +91,13 @@ h1{
     border: 1px solid var(--gris);
     padding: 30px 25px;
 }
+.foto-perfil{
+    width: 70px;
+    border-radius: 100px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
 
 .texto-comentario{
     display: flex;
