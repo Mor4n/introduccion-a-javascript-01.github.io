@@ -95,14 +95,23 @@ h1{
     flex-direction: column;
 }
 
-.nombre-usuario{
+
+.contenido-comentario{
+    font-size: 2.5rem;
+    color: var(--blanco);
+}
+
+.usuario-fecha{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.nombre-usuario,.fecha-hora{
     color: var(--gris);
     font-size: 1.6rem;
     margin-bottom: 15px;
-}
-.texto-comentario{
-    font-size: 2.5rem;
-    color: var(--blanco);
 }
 
 
