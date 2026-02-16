@@ -74,8 +74,10 @@ Por lo tanto:
     - Contenido comentario, el cual almacena el contenido del comentario, siendo estos elementos:
         - Usuario + fecha y hora (Lo guardo en su propio div para que pueda ponerlo en forma horizontal)
         - Texto Comentario : es el comentario ingresado en el input (Está colocado asi para que quede debajo del usuario + fecha y hora)
-    - Botón de eliminar (Este queda a la derecha de todo)
-Lo mencionado anteriormente y por lo que pido disculpas ;n; es que siento que se ve muy embarañoso mi código (pido perdón, es la primera vez que intento esto), se realizó con appendChild para guardar cada cosa en nuevoComentario como un nodo hijo por así decirlo.
+    - Botón de eliminar (Este queda a la derecha de todo).
+
+
+Todo lo mencionado anteriormente y por lo que pido disculpas ;n; es que siento que se ve muy embarañoso mi código (pido perdón, es la primera vez que intento esto), se realizó con appendChild para guardar cada cosa en nuevoComentario como un nodo hijo por así decirlo.
 A cada elemento, le llegué a insertar texto con .textContent y le ponía el value del elemento que declaré al inicio de los inputs.
 Para obtener la fecha y hora pude encontrar en StackOverflow un código que me sirvió bastante, el que fue new Date().toLocaleString(), donde directamente obtiene la fecha y hora y lo convierte a string formateado en nuestra región, lo cual se me hizo demasiado chido y muy práctico.
 Para la funcionalidad de borrar comentario fue donde siento que me trabé demasiado, en un inicio pensé en algo como "ponerle id's a cada elemento con un contador" y que de alguna forma al dar clic en el botón, como que viera en que id había cliqueado y que directamente borrara el contenedor del nuevoComentario, entonces, el borrar el contenedor pude encontrar más o menos rápido en la documentación de mozilla que era con un .remove(), sin embargo, mi problema fue el como le hago para irme atrás, o que vea la capa superior o nodo superior por así decirlo de donde estoy dando clic.
