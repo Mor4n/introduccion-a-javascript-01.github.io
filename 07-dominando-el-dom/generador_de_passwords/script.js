@@ -5,8 +5,35 @@ y esto agregarlo en un arreglo letra por letra y juntarlo al final?
 
 
 const generate_btn = document.querySelector("#generate_btn");
+const password_range = document.querySelector("#password_range");
+const uppercase_checkbox = document.querySelector("#uppercase_checkbox");
+const lowercase_checkbox = document.querySelector("#lowercase_checkbox");
+const numbers_checkbox = document.querySelector("#numbers_checkbox");
+const symbols_checkbox = document.querySelector("#symbols_checkbox");
+const generated_password = document.querySelector("#generated_password");
 
+generate_btn.addEventListener("click", () => {
+    // console.log("Presionaste este boton");
 
-generate_btn.addEventListener( () => {
     
-})
+    const result = generate_password(password_range.value,
+        uppercase_checkbox.checked,
+        lowercase_checkbox.checked, 
+        numbers_checkbox.checked, 
+        symbols_checkbox.checked);
+        
+    generated_password.innerHTML = result;
+});
+
+
+const generate_password = (length, uppercase,lowercase, number,  symbols) =>{
+    console.log(`Generando una contraseña:
+        Con longitud: ${length}, 
+        Con mayusculas: ${uppercase},
+        Con minusculas: ${lowercase},
+        Con numeros: ${number},
+        Con simbolos: ${symbols} `);
+
+    return "CONTRASEÑA GENERADA";
+    
+}

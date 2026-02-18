@@ -10,7 +10,7 @@
     
     <div>
         <!-- Salida de password -->
-        <p>PASSWORD</p>
+        <p id="generated_password">PASSWORD</p>
     </div>
 
     <div class="form">
@@ -18,26 +18,26 @@
         <p>Character Length <span>10</span> </p>
         
         <!-- Slider -->
-        <input type="range" min="0" max="20">
+        <input id="password_range" type="range" min="0" max="20">
 
         <!-- Incluir mayusculas -->
         <div>
-        <input type="checkbox" name="" id=""/> <span>Include Uppercase Letters</span>
+        <input id="uppercase_checkbox" type="checkbox" name="" id=""/> <span>Include Uppercase Letters</span>
         </div>
 
         <!-- Incluir minusculas -->
         <div>
-        <input type="checkbox" name="" id=""/> <span>Include Lowercase Letters</span>
+        <input id="lowercase_checkbox" type="checkbox" name="" id=""/> <span>Include Lowercase Letters</span>
         </div>  
 
         <!-- Incluir numeros -->
         <div>
-        <input type="checkbox" name="" id=""/> <span>Include Numbers</span>
+        <input id="numbers_checkbox" type="checkbox" name="" id=""/> <span>Include Numbers</span>
         </div>
 
         <!-- Incluir simbolos -->
         <div>
-        <input type="checkbox" id="generate_btn"/> <span>Include Symbols</span>
+        <input id="symbols_checkbox" type="checkbox"/> <span>Include Symbols</span>
         </div>
 
         <div>
@@ -45,7 +45,7 @@
 
         </div>
 
-        <button>Generate -></button>
+        <button id="generate_btn">Generate -></button>
 
 
 
