@@ -12,6 +12,14 @@ const numbers_checkbox = document.querySelector("#numbers_checkbox");
 const symbols_checkbox = document.querySelector("#symbols_checkbox");
 const generated_password = document.querySelector("#generated_password");
 
+/* Lista de valores */
+const uppercase_letters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+const lowercase_letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+const numbers = ['0','1','2','3','4','5','6','7','8','9'];
+const symbols = ['!','#','$','%','&'];
+
+
+
 generate_btn.addEventListener("click", () => {
     // console.log("Presionaste este boton");
 
