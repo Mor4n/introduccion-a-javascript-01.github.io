@@ -11,6 +11,17 @@ const lowercase_checkbox = document.querySelector("#lowercase_checkbox");
 const numbers_checkbox = document.querySelector("#numbers_checkbox");
 const symbols_checkbox = document.querySelector("#symbols_checkbox");
 const generated_password = document.querySelector("#generated_password");
+const character_length_span = document.querySelector("#character_length_span");
+
+// Cambio de valor de character length
+password_range.addEventListener("change",() => {
+    character_length_span.innerHTML= password_range.value;
+})
+
+
+
+
+
 
 /* Lista de valores */
 const uppercase_array = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];

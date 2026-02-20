@@ -51,3 +51,5 @@ https://mor4n.github.io/introduccion-a-javascript-01.github.io/07-dominando-el-d
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+https://stackoverflow.com/questions/69606670/javascript-add-eventlistener-to-all-input-with-type-range <- Con el comentario que vi de la persona de la respuesta, vi que tenia "change" y le puse así a ver si agarraba y agarró o-o
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
