@@ -12,16 +12,28 @@ const numbers_checkbox = document.querySelector("#numbers_checkbox");
 const symbols_checkbox = document.querySelector("#symbols_checkbox");
 const generated_password = document.querySelector("#generated_password");
 const character_length_span = document.querySelector("#character_length_span");
+const copy_password_button = document.querySelector("#copy_password_button");
 
 // Cambio de valor de character length
 password_range.addEventListener("change",() => {
+    // Puedo usar change cuando quiero usarlo en una lista o como este que es de rango
     character_length_span.innerHTML= password_range.value;
 })
 
+// Copiar la contraseña
+copy_password_button.addEventListener("click", () => {
+    let password = document.querySelector("#generated_password"); // obtengo el valor de generated_password
+    
+    navigator.clipboard
+    .writeText(password.innerHTML)
+    .then(() => {
+    console.log(`Contraseña ${password.innerHTML} copiada`);
+    })
+    .catch(() => {
+        console.log(`No se pudo copiar la contraseña`);
+    });
 
-
-
-
+});
 
 /* Lista de valores */
 const uppercase_array = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];

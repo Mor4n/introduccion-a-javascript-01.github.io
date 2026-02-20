@@ -53,3 +53,5 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
 https://stackoverflow.com/questions/69606670/javascript-add-eventlistener-to-all-input-with-type-range <- Con el comentario que vi de la persona de la respuesta, vi que tenia "change" y le puse así a ver si agarraba y agarró o-o
 https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
+https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText <- no me salió el ejemplo y tuve que buscar en stackoverflow
+https://stackoverflow.com/questions/69438702/why-does-navigator-clipboard-writetext-not-copy-text-to-clipboard-if-it-is-pro 
