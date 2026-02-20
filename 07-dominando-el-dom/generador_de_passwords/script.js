@@ -19,6 +19,9 @@ const numbers = ['0','1','2','3','4','5','6','7','8','9'];
 const symbols = ['!','#','$','%','&'];
 
 
+
+
+
 generate_btn.addEventListener("click", () => {
     // console.log("Presionaste este boton");
 
@@ -60,8 +63,35 @@ const generate_password = (length, uppercase,lowercase, number,  symbols) =>{
     if(!uppercase && !lowercase && !number && !symbols){
         return "Por favor, seleccione al menos una opción para brindarle una contraseña";
     }
+    // Empiezo la generación de la contraseña
     else{
+        
+        let generalCounter = 0;
+        // Se va a iterar en base al tamaño que decidió el usuario
+        for (let i = 0; i < length; i++) {
 
+            
+            // Si contador general es menor a 1 quiere decir que no ha pasado por aqui, entonces qiuero que pase a la siguietne
+            if(generalCounter < 1){
+                // En una posición random del arreglo, donde esté vacío, <- me falta verificar que esté vacio
+                empty_position = Math.floor(Math.random() * password_array.length);
+
+                // vas a añadir tu valor de una letra uppercase random
+                random_uppercase_position = Math.floor(Math.random() * uppercase_letters.length);
+
+                // En la posición random vacia del arreglo de password, añade el valor de la mayuscula, el cual tiene una posición random
+                password_array[empty_position]= uppercase_letters[random_uppercase_position];
+
+                console.log(password_array);
+                
+                // Aumento el contador para que no vuelva a repetir este paso
+                generalCounter++;
+
+            }
+
+
+            
+        }
 
 
     }
