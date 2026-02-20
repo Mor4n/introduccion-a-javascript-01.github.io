@@ -88,7 +88,7 @@ const generate_password = (length, uppercase,lowercase, number,  symbol) =>{
             if(generalCounter === 0 && uppercase){
                 
                 // En una posición random vacía del arreglo
-                empty_position = get_empty_position(password_array);
+                let empty_position = get_empty_position(password_array);
 
                 // Si llegara a devolver nulo, quiere decir que ya se llenó el array, por lo tanto, rompe el ciclo
                 if (empty_position === null) {
@@ -111,7 +111,7 @@ const generate_password = (length, uppercase,lowercase, number,  symbol) =>{
             // Minusculas
             if(generalCounter === 1 && lowercase){
                 // En una posición random vacía del arreglo
-                empty_position = get_empty_position(password_array);
+                let empty_position = get_empty_position(password_array);
 
                 // Si llegara a devolver nulo, quiere decir que ya se llenó el array, por lo tanto, rompe el ciclo
                 if (empty_position === null) {
@@ -135,7 +135,7 @@ const generate_password = (length, uppercase,lowercase, number,  symbol) =>{
 
             if(generalCounter === 2 && number){
                 // En una posición random vacía del arreglo
-                empty_position = get_empty_position(password_array);
+                let empty_position = get_empty_position(password_array);
 
                 // Si llegara a devolver nulo, quiere decir que ya se llenó el array, por lo tanto, rompe el ciclo
                 if (empty_position === null) {
@@ -159,7 +159,7 @@ const generate_password = (length, uppercase,lowercase, number,  symbol) =>{
 
             if(generalCounter === 3 && symbol){
                 // En una posición random vacía del arreglo
-                empty_position = get_empty_position(password_array);
+                let empty_position = get_empty_position(password_array);
 
                 // Si llegara a devolver nulo, quiere decir que ya se llenó el array, por lo tanto, rompe el ciclo
                 if (empty_position === null) {
