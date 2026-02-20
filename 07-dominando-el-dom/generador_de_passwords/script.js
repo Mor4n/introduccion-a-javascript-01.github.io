@@ -74,7 +74,7 @@ const generate_password = (length, uppercase,lowercase, number,  symbols) =>{
             // Si contador general es igual a 0 quiere decir que no ha pasado por aqui, entonces qiuero que pase a la siguietne
             if(generalCounter === 0){
                 // En una posición random del arreglo, donde esté vacío, <- me falta verificar que esté vacio
-                empty_position = Math.floor(Math.random() * password_array.length);
+                empty_position = get_empty_position(password_array);
 
                 // vas a añadir tu valor de una letra uppercase random
                 random_uppercase_position = Math.floor(Math.random() * uppercase_letters.length);
@@ -90,6 +90,7 @@ const generate_password = (length, uppercase,lowercase, number,  symbols) =>{
             }
 
 
+
             
         }
 
@@ -99,4 +100,23 @@ const generate_password = (length, uppercase,lowercase, number,  symbols) =>{
 
     return "CONTRASEÑA GENERADA";
     
+}
+
+// Función para encontrar una posición vacía del arreglo
+const get_empty_position = (password_array) =>{
+
+    let empty_position = false; // "no he encontrado una posicion vacia"
+    let position; // posición a rellenar
+
+
+    // mientras que no sea vacia la posición, voy a buscar una posición que sea vacia para rellenarla
+    while (!empty_position) {
+
+        position = Math.floor(Math.random() * password_array.length);
+        empty_position = password_array[position] === undefined; // evaluo si existe un valor en esa posición del arreglo, si existe, se repite el bucle hasta encontrar una posición vacia
+    }
+
+    return position;
+
+
 }
