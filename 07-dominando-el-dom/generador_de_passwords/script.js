@@ -71,8 +71,8 @@ const generate_password = (length, uppercase,lowercase, number,  symbols) =>{
         for (let i = 0; i < length; i++) {
 
             
-            // Si contador general es menor a 1 quiere decir que no ha pasado por aqui, entonces qiuero que pase a la siguietne
-            if(generalCounter < 1){
+            // Si contador general es igual a 0 quiere decir que no ha pasado por aqui, entonces qiuero que pase a la siguietne
+            if(generalCounter === 0){
                 // En una posición random del arreglo, donde esté vacío, <- me falta verificar que esté vacio
                 empty_position = Math.floor(Math.random() * password_array.length);
 
