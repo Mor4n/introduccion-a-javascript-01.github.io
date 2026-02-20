@@ -75,13 +75,13 @@ const generate_password = (length, uppercase,lowercase, number,  symbols) =>{
             // Si contador general es igual a 0 quiere decir que no ha pasado por aqui, entonces qiuero que pase a la siguietne
             
             if(generalCounter === 0){
-                // En una posición random del arreglo, donde esté vacío, <- me falta verificar que esté vacio
+                // En una posición random vacía del arreglo
                 empty_position = get_empty_position(password_array);
 
-                // vas a añadir tu valor de una letra uppercase random
+                // vas a añadir tu valor de una letra mayuscula random
                 random_uppercase_position = Math.floor(Math.random() * uppercase_letters.length);
 
-                // En la posición random vacia del arreglo de password, añade el valor de la mayuscula, el cual tiene una posición random
+                // En la posición random vacia del arreglo de password, añade un valor random del array de mayusculas
                 password_array[empty_position]= uppercase_letters[random_uppercase_position];
 
                 console.log(password_array);
@@ -93,14 +93,33 @@ const generate_password = (length, uppercase,lowercase, number,  symbols) =>{
 
             // Minusculas
             if(generalCounter === 1){
-                // En una posición random del arreglo, donde esté vacío, <- me falta verificar que esté vacio
+                // En una posición random vacía del arreglo
                 empty_position = get_empty_position(password_array);
 
-                // vas a añadir tu valor de una letra lowercase random
+                // vas a añadir tu valor de una letra minuscula random
                 random_lowercase_position = Math.floor(Math.random() * lowercase_letters.length);
 
-                // En la posición random vacia del arreglo de password, añade el valor de la mayuscula, el cual tiene una posición random
+                // En la posición random vacia del arreglo de password, añade un valor random del array de minusculas
                 password_array[empty_position]= lowercase_letters[random_lowercase_position];
+
+                console.log(password_array);
+                
+                // Aumento el contador para que no vuelva a repetir este paso
+                generalCounter++;
+
+            }
+
+            // Números
+
+            if(generalCounter === 2){
+                // En una posición random vacía del arreglo
+                empty_position = get_empty_position(password_array);
+
+                // vas a añadir tu valor de un numero random de su arreglo
+                random_numbers_position = Math.floor(Math.random() * numbers.length);
+
+                // En la posición random vacia del arreglo de password, añade un valor random del array de numeros
+                password_array[empty_position]= numbers[random_numbers_position];
 
                 console.log(password_array);
                 
