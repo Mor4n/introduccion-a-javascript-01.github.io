@@ -71,7 +71,9 @@ const generate_password = (length, uppercase,lowercase, number,  symbols) =>{
         for (let i = 0; i < length; i++) {
 
             
+            // Mayusculas
             // Si contador general es igual a 0 quiere decir que no ha pasado por aqui, entonces qiuero que pase a la siguietne
+            
             if(generalCounter === 0){
                 // En una posición random del arreglo, donde esté vacío, <- me falta verificar que esté vacio
                 empty_position = get_empty_position(password_array);
@@ -88,6 +90,25 @@ const generate_password = (length, uppercase,lowercase, number,  symbols) =>{
                 generalCounter++;
 
             }
+
+            // Minusculas
+            if(generalCounter === 1){
+                // En una posición random del arreglo, donde esté vacío, <- me falta verificar que esté vacio
+                empty_position = get_empty_position(password_array);
+
+                // vas a añadir tu valor de una letra lowercase random
+                random_lowercase_position = Math.floor(Math.random() * lowercase_letters.length);
+
+                // En la posición random vacia del arreglo de password, añade el valor de la mayuscula, el cual tiene una posición random
+                password_array[empty_position]= lowercase_letters[random_lowercase_position];
+
+                console.log(password_array);
+                
+                // Aumento el contador para que no vuelva a repetir este paso
+                generalCounter++;
+
+            }
+
 
 
 
