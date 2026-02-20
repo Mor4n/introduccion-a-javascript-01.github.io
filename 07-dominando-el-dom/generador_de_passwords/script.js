@@ -63,18 +63,30 @@ const generate_password = (length, uppercase,lowercase, number,  symbol) =>{
     if(!uppercase && !lowercase && !number && !symbol){
         return "Por favor, seleccione al menos una opción para brindarle una contraseña";
     }
+    else if (length<8){
+        return "Por favor, seleccione una longitud superior o igual a 8";
+    }
     // Empiezo la generación de la contraseña
     else{
         
         let generalCounter = 0;
-        // Se va a iterar en base al tamaño que decidió el usuario
-        for (let i = 0; i < length; i++) {
+        // Se iterará mientras existan espacios vacios, si el valor es null, quiere decir que no hay espacios vacios
+        while (get_empty_position(password_array) !== null) {
+
+            // Si no está activado el checkbox, entonces aumenta el contador y ve a la siguiente posición
+            if (generalCounter === 0 && !uppercase) generalCounter++;
+            if (generalCounter === 1 && !lowercase) generalCounter++;
+            if (generalCounter === 2 && !number) generalCounter++;
+            if (generalCounter === 3 && !symbol) generalCounter = 0;
+
+
 
             
             // Mayusculas
             // Si contador general es igual a 0 quiere decir que no ha pasado por aqui, entonces qiuero que pase a la siguietne
             
             if(generalCounter === 0 && uppercase){
+                
                 // En una posición random vacía del arreglo
                 empty_position = get_empty_position(password_array);
 
@@ -97,7 +109,7 @@ const generate_password = (length, uppercase,lowercase, number,  symbol) =>{
             }
 
             // Minusculas
-            if(generalCounter === 1){
+            if(generalCounter === 1 && lowercase){
                 // En una posición random vacía del arreglo
                 empty_position = get_empty_position(password_array);
 
@@ -121,7 +133,7 @@ const generate_password = (length, uppercase,lowercase, number,  symbol) =>{
 
             // Números
 
-            if(generalCounter === 2){
+            if(generalCounter === 2 && number){
                 // En una posición random vacía del arreglo
                 empty_position = get_empty_position(password_array);
 
@@ -145,7 +157,7 @@ const generate_password = (length, uppercase,lowercase, number,  symbol) =>{
 
             // Simbolos
 
-            if(generalCounter === 3){
+            if(generalCounter === 3 && symbol){
                 // En una posición random vacía del arreglo
                 empty_position = get_empty_position(password_array);
 

@@ -50,3 +50,4 @@ https://mor4n.github.io/introduccion-a-javascript-01.github.io/07-dominando-el-d
 ## Fuentes:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
