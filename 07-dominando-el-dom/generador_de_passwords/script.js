@@ -33,7 +33,7 @@ copy_password_button.addEventListener("click", () => {
     navigator.clipboard
     .writeText(password.innerHTML)
     .then(() => {
-    console.log(`Contraseña ${password.innerHTML} copiada`);
+    alert(`Contraseña: ${password.innerHTML} copiada!`);
     })
     .catch(() => {
         console.log(`No se pudo copiar la contraseña`);

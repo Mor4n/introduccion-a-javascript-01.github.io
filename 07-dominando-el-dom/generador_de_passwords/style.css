@@ -31,9 +31,9 @@ main{
 
 h1{
     color: var(--light-gray);
-    font-weight: 400;
+    font-weight: 600;
     margin: 30px 0px;
-    font-size: 19px;
+    font-size: 22px;
 }
 /* color blanco a los siguientes elementos */
 span,p,#strength,#character_length_div{
