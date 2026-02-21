@@ -13,6 +13,12 @@ const symbols_checkbox = document.querySelector("#symbols_checkbox");
 const generated_password = document.querySelector("#generated_password");
 const character_length_span = document.querySelector("#character_length_span");
 const copy_password_button = document.querySelector("#copy_password_button");
+const bar1 = document.querySelector("#bar1");
+const bar2 = document.querySelector("#bar2");
+const bar3 = document.querySelector("#bar3");
+const bar4 = document.querySelector("#bar4");
+const level_span = document.querySelector("#level_span");
+
 
 // Cambio de valor de character length
 password_range.addEventListener("change",() => {
@@ -213,8 +219,11 @@ const generate_password = (length, uppercase,lowercase, number,  symbol) =>{
     
     let password = password_array.join("");// uno todo el arreglo en un texto sin espacios
 
+    // Reseteo de colores de la validación
+    color_reset(bar1,bar2,bar3,bar4,level_span)
+
     // Lo mando a la validación de fuerza
-    strength_validation(password,length,uppercase,lowercase,symbol,number);
+    strength_validation(password,length,uppercase,lowercase,symbol,number,bar1,bar2,bar3,bar4,level_span);
 
     return password; // le mando la contraseña final
     
@@ -247,13 +256,27 @@ const get_empty_position = (password_array) => {
     return empty_positions[random_position]; // devuelve la posición random para que ahi guarde el dato
 }
 
+
+
+
+const color_reset = (bar1,bar2,bar3,bar4,level_span) =>{
+        const default_color = "#FFFFFF";
+        bar1.style.backgroundColor = default_color;
+        bar2.style.backgroundColor = default_color;
+        bar3.style.backgroundColor = default_color;
+        bar4.style.backgroundColor = default_color;
+        level_span.innerHTML = "";
+}
+
+
 // Esto es para ver la seguridad o fuerza de la contraseña
-const strength_validation = (password, range, uppercase,lowercase,symbol, number) =>{
+const strength_validation = (password, range, uppercase,lowercase,symbol, number, bar1,bar2,bar3,bar4,level_span) =>{
     // obtengo las 4 barritas
-    const bar1 = document.querySelector("#bar1");
-    const bar2 = document.querySelector("#bar2");
-    const bar3 = document.querySelector("#bar3");
-    const bar4 = document.querySelector("#bar4");
+  
+    const strong_color = "#00ffb3";
+    const medium_color = "#f9cb64";
+    const weak_color = "#ffb347";
+    const very_weak_color = "#ff4d4d";
 
     // Suma de cuantos checkbox se seleccionaron
     let checkboxCounter = 0;
@@ -279,22 +302,34 @@ const strength_validation = (password, range, uppercase,lowercase,symbol, number
     
     // Si está todo seleccionado (siendo 4 el maximo) y la contraseña es igual o mayor a 12 digitos, es fuerte
     if(range>=12 && checkboxCounter==4){
-        bar1.style.backgroundColor = "#00ffb3";
-        bar2.style.backgroundColor = "#00ffb3";
-        bar3.style.backgroundColor = "#00ffb3";
-        bar4.style.backgroundColor = "#00ffb3";
+        bar1.style.backgroundColor = strong_color;
+        bar2.style.backgroundColor = strong_color;
+        bar3.style.backgroundColor = strong_color;
+        bar4.style.backgroundColor = strong_color;
+        level_span.innerHTML = "Strong";
+        level_span.style.color = strong_color;
+
     }
-    else if (range>= 10 && checkboxCounter==3){
-        bar1.style.backgroundColor = "#f9cb64";
-        bar2.style.backgroundColor = "#f9cb64";
-        bar3.style.backgroundColor = "#f9cb64";
+    else if (range>= 10 && checkboxCounter>=3){
+        bar1.style.backgroundColor = medium_color;
+        bar2.style.backgroundColor = medium_color;
+        bar3.style.backgroundColor = medium_color;
+        level_span.innerHTML = "Medium";
+        level_span.style.color = medium_color;
+
     }
-    else if (range >=8 && checkboxCounter==2){
-        bar1.style.backgroundColor = "#ffb347";
-        bar2.style.backgroundColor = "#ffb347";
+    else if (range >=8 && checkboxCounter>=2){
+        bar1.style.backgroundColor = weak_color;
+        bar2.style.backgroundColor = weak_color;
+        level_span.innerHTML = "Weak";
+        level_span.style.color = weak_color;
+
     }
-    else if (range >=8 && checkboxCounter==1){
-        bar1.style.backgroundColor = "#ff4d4d";
+    else{
+        bar1.style.backgroundColor = very_weak_color;
+        level_span.innerHTML = "Very weak";
+        level_span.style.color = very_weak_color;
+
     }
 
 
