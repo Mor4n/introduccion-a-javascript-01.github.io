@@ -4,6 +4,8 @@
     --text: #eae9f1;
     --white: #FEFEFE;
     --buttons: #a4ffaf;
+    --strong-gray: #56555d;
+    --light-gray:#7d7b8a;
 }
 
 *{
@@ -23,20 +25,36 @@ main{
 
 }
 
+h1{
+    color: var(--light-gray);
+}
 
-span,p,#strength,h1{
+span,p,#strength{
     color: var(--text);
 }
 
+/* contenedor de la contraseña generada */
 .password_div{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--fields-background);
+    width: 500px;
+    height: 50px;
+    padding: 25px;
+}
 
+#generated_password{
+    color: var(--strong-gray);
+}
+
+#copy_password_button{
+    color: var(--buttons);
+    cursor: pointer;
 }
 
 
-
-
+/* contenedor de opciones */
 .form{
     max-width: 200px;
     display: flex;
