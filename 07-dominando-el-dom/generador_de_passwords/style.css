@@ -84,13 +84,11 @@ span,p,#strength,#character_length_div{
     font-weight: bold;
     font-size: 25px;
 }
-#password_range{
-    accent-color: var(--buttons);
-}
 
 /* Espaciado hacia abajo entre cada input */
 input{
     margin-bottom: 20px;
+    accent-color: var(--buttons);
 }
 /* espacio de la izquierda de cada checkbox del texto */
 span{
