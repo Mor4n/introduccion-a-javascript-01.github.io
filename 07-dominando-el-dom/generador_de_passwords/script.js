@@ -88,6 +88,10 @@ const generate_password = (length, uppercase,lowercase, number,  symbol) =>{
     // console.log(password_array);
     
     
+        
+    // Reseteo de colores de la validación
+    color_reset(bar1,bar2,bar3,bar4,level_span);
+
     // Si ninguno de estas opciones es true, no puedo hacer la contraseña
     if(!uppercase && !lowercase && !number && !symbol){
         return "Por favor, seleccione al menos una opción para brindarle una contraseña";
@@ -219,9 +223,6 @@ const generate_password = (length, uppercase,lowercase, number,  symbol) =>{
     
     let password = password_array.join("");// uno todo el arreglo en un texto sin espacios
 
-    // Reseteo de colores de la validación
-    color_reset(bar1,bar2,bar3,bar4,level_span)
-
     // Lo mando a la validación de fuerza
     strength_validation(password,length,uppercase,lowercase,symbol,number,bar1,bar2,bar3,bar4,level_span);
 
@@ -260,7 +261,7 @@ const get_empty_position = (password_array) => {
 
 
 const color_reset = (bar1,bar2,bar3,bar4,level_span) =>{
-        const default_color = "#FFFFFF";
+        const default_color = "#18171f";
         bar1.style.backgroundColor = default_color;
         bar2.style.backgroundColor = default_color;
         bar3.style.backgroundColor = default_color;

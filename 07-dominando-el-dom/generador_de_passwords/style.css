@@ -18,13 +18,15 @@
 body{
     background-color: var(--black);
     font-family: "Roboto", sans-serif;
+    
 }
+
 main{
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-
+    padding-top: 80px;
 }
 
 h1{
@@ -33,8 +35,8 @@ h1{
     margin: 30px 0px;
     font-size: 19px;
 }
-
-span,p,#strength{
+/* color blanco a los siguientes elementos */
+span,p,#strength,#character_length_div{
     color: var(--text);
 }
 
@@ -45,9 +47,10 @@ span,p,#strength{
     align-items: center;
     background-color: var(--fields-background);
     width: 500px;
-    height: 50px;
+    height: 80px;
     padding: 25px;
     margin-bottom: 40px;
+    font-size: 25px;
 }
 
 #generated_password{
@@ -70,31 +73,50 @@ span,p,#strength{
     background-color: var(--fields-background);
 
 }
+#character_length_div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
 #character_length_span{
     color: var(--buttons);
     font-weight: bold;
     font-size: 25px;
 }
+/* Espaciado hacia abajo entre cada input */
+input{
+    margin-bottom: 20px;
+}
+/* espacio de la izquierda de cada checkbox del texto */
+span{
+    padding-left: 18px;
+}
 
-
+/* contenedor de la seguridad de la contraseña */
 #strength{
+    /* margin:25px 0px; */
     display: flex;
     background-color: var(--strength);
     color: var(--strong-gray);
     font-weight: bold;
+    justify-content: space-between;
+    text-transform: uppercase;
+    align-items: center;
+    padding: 20px;
 }
-
+/* este dirá si es very weak, weak, strong, etc */
 #level_span{
     font-size: 15px;
     text-transform: uppercase;
 }
 
+/* barritas de nivel de fuerza */
 #grid{
-    margin: 25px;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-auto-rows: 30px;
-    gap: 20px;
+    grid-auto-rows: 10px;
+    gap: 10px;
 }
 #bar1{
     border: 1px solid var(--white);
@@ -117,10 +139,14 @@ span,p,#strength{
     grid-row: 1/3;
 }
 
+/* boton de generar la contraseña */
 #generate_btn{
     background-color: var(--buttons);
     color: var(--black);
     border: none;
     font-weight: bold;
     padding: 20px 0px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 25px;
 }
