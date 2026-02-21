@@ -1,7 +1,8 @@
 :root{
-    --main-background: #0e0d13;
     --fields-background: #24232b;
+    --strength: #18171f;
     --text: #eae9f1;
+    --black: #0e0d13;
     --white: #FEFEFE;
     --buttons: #a4ffaf;
     --strong-gray: #56555d;
@@ -15,7 +16,7 @@
 }
 
 body{
-    background-color: var(--main-background);
+    background-color: var(--black);
     font-family: "Roboto", sans-serif;
 }
 main{
@@ -46,6 +47,7 @@ span,p,#strength{
     width: 500px;
     height: 50px;
     padding: 25px;
+    margin-bottom: 40px;
 }
 
 #generated_password{
@@ -61,13 +63,25 @@ span,p,#strength{
 
 /* contenedor de opciones */
 .form{
-    max-width: 200px;
+    width: 500px;
+    padding: 35px;
     display: flex;
     flex-direction: column;
+    background-color: var(--fields-background);
+
 }
+#character_length_span{
+    color: var(--buttons);
+    font-weight: bold;
+    font-size: 25px;
+}
+
 
 #strength{
     display: flex;
+    background-color: var(--strength);
+    color: var(--strong-gray);
+    font-weight: bold;
 }
 
 #level_span{
@@ -103,3 +117,10 @@ span,p,#strength{
     grid-row: 1/3;
 }
 
+#generate_btn{
+    background-color: var(--buttons);
+    color: var(--black);
+    border: none;
+    font-weight: bold;
+    padding: 20px 0px;
+}
