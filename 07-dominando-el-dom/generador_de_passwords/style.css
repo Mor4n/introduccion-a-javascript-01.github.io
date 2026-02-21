@@ -146,9 +146,11 @@ span{
     background-color: var(--buttons);
     color: var(--black);
     border: none;
-    font-weight: bold;
+    font-weight: 500;
     padding: 20px 0px;
     cursor: pointer;
     text-transform: uppercase;
     margin-top: 25px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
 }
