@@ -55,3 +55,4 @@ https://stackoverflow.com/questions/69606670/javascript-add-eventlistener-to-all
 https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
 https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText <- no me salió el ejemplo y tuve que buscar en stackoverflow
 https://stackoverflow.com/questions/69438702/why-does-navigator-clipboard-writetext-not-copy-text-to-clipboard-if-it-is-pro 
+https://stackoverflow.com/questions/197748/how-do-i-change-the-background-color-with-javascript

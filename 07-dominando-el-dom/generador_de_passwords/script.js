@@ -213,6 +213,9 @@ const generate_password = (length, uppercase,lowercase, number,  symbol) =>{
     
     let password = password_array.join("");// uno todo el arreglo en un texto sin espacios
 
+    // Lo mando a la validación de fuerza
+    strength_validation(password,length,uppercase,lowercase,symbol,number);
+
     return password; // le mando la contraseña final
     
 }
@@ -242,4 +245,58 @@ const get_empty_position = (password_array) => {
     const random_position = Math.floor(Math.random() * empty_positions.length);
 
     return empty_positions[random_position]; // devuelve la posición random para que ahi guarde el dato
+}
+
+// Esto es para ver la seguridad o fuerza de la contraseña
+const strength_validation = (password, range, uppercase,lowercase,symbol, number) =>{
+    // obtengo las 4 barritas
+    const bar1 = document.querySelector("#bar1");
+    const bar2 = document.querySelector("#bar2");
+    const bar3 = document.querySelector("#bar3");
+    const bar4 = document.querySelector("#bar4");
+
+    // Suma de cuantos checkbox se seleccionaron
+    let checkboxCounter = 0;
+
+    // Verificacion de true de cada checkbox
+    if(uppercase){
+        checkboxCounter++; // si es verdadero, que se sume
+    }
+    if(lowercase){
+        checkboxCounter++;
+    }
+    if(symbol){
+        checkboxCounter++;
+    }
+    if(number){
+        checkboxCounter++;
+    }
+
+
+
+
+    console.log(range);
+    
+    // Si está todo seleccionado (siendo 4 el maximo) y la contraseña es igual o mayor a 12 digitos, es fuerte
+    if(range>=12 && checkboxCounter==4){
+        bar1.style.backgroundColor = "#00ffb3";
+        bar2.style.backgroundColor = "#00ffb3";
+        bar3.style.backgroundColor = "#00ffb3";
+        bar4.style.backgroundColor = "#00ffb3";
+    }
+    else if (range>= 10 && checkboxCounter==3){
+        bar1.style.backgroundColor = "#f9cb64";
+        bar2.style.backgroundColor = "#f9cb64";
+        bar3.style.backgroundColor = "#f9cb64";
+    }
+    else if (range >=8 && checkboxCounter==2){
+        bar1.style.backgroundColor = "#ffb347";
+        bar2.style.backgroundColor = "#ffb347";
+    }
+    else if (range >=8 && checkboxCounter==1){
+        bar1.style.backgroundColor = "#ff4d4d";
+    }
+
+
+
 }
