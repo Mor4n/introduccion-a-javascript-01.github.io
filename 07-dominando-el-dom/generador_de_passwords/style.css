@@ -16,6 +16,7 @@
 
 body{
     background-color: var(--main-background);
+    font-family: "Roboto", sans-serif;
 }
 main{
     display: flex;
@@ -27,6 +28,9 @@ main{
 
 h1{
     color: var(--light-gray);
+    font-weight: 400;
+    margin: 30px 0px;
+    font-size: 19px;
 }
 
 span,p,#strength{
@@ -46,6 +50,7 @@ span,p,#strength{
 
 #generated_password{
     color: var(--strong-gray);
+    font-weight: bold;
 }
 
 #copy_password_button{
