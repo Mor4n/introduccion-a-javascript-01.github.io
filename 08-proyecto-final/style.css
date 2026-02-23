@@ -202,3 +202,12 @@ body{
     border: none;
     font-family: "Poppins", sans-serif;
 }
+#submit-btn{
+    font-family: "Poppins", sans-serif;
+    color: var(--text-color);
+    font-weight: bold;
+    border: none;
+    background:none;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
