@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto final - Caja de comentarios</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4c1a0d118c.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
-    <!-- Menu de navegacion -->
+
+    <!-- Menu principal -->
 
     <main class="main-container">
 
-
+        <!-- Sección general del post que incluye todo -->
         <section class="post-section">
-
+            <!-- Imagen del post -->
             <div class="img-div">
                 <img id="img-post" alt="Imagen de perrito">
             </div>
-
+            <!-- Información del que lo publicó que va en la parte superior -->
             <section class="op-information">
                 <img id="op-pfp-img" alt="Imagen de perfil de creador del post">
                 <p id="op-txt">Mor4n</p>
                 <p id="location-txt">Agua Prieta, Sonora</p>
             </section>
-
+            <!-- Descripción del post -->
             <section class="op-post-information">
                 <img id="op-pfp-img" alt="Imagen de perfil de creador del post">
                 <p id="op-txt">Mor4n</p>
@@ -34,43 +37,53 @@
             </section>
 
 
-        
-        <section class="comments-section">
+            <!-- Sección de comentarios -->
+            <section class="comments-section">
 
-            <section class="comments-container">
+                <section class="comments-container">
 
+                </section>
+
+
+            </section>
+
+            <section class="interaction-section">
+                <div class="interaction-div">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-comment"></i>
+                    <i class="fa-regular fa-paper-plane"></i>
+                </div>
+                
+                <i class="fa-regular fa-bookmark"></i>
+            </section>
+
+            <section class="post-information">
+                <p id="post-likes">0 <span> Me gusta</span></p>
+                <p id="post-date"></p>
+            </section>
+
+            <section class="comment-form-section">
+
+                <form id="comment-form">
+                    <input type="text" id="username" placeholder="Ingrese su nombre de usuario aquí">
+
+                    <textarea id="content" placeholder="Agrega un comentario..."></textarea>
+
+                    <button type="submit" id="submit-btn">
+                        Publicar
+                    </button>
+                </form>
             </section>
 
 
         </section>
 
-            
-        </section>
 
 
-     
-        <section class="post-form-section">
-            <h2>Crear Publicación</h2>
 
-            <form id="post-form">
-                <input 
-                    type="text" 
-                    id="username" 
-                    placeholder="Ingrese su nombre de usuario aquí"
-                >
-
-                <textarea 
-                    id="content" 
-                    placeholder="Ingrese el contenido"
-                ></textarea>
-
-                <button type="submit" id="submit-btn">
-                    Publicar
-                </button>
-            </form>
-        </section>
     </main>
 
     <script src="./script.js"></script>
 </body>
+
 </html>

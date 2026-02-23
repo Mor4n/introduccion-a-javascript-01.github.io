@@ -16,13 +16,3 @@
 .main-container{
     position: absolute;
 }
-
-
-/* seccion para crear una publicacion */
-
-.post-form{
-    /* por defecto lo quiero tener oculto para mostrarlo con el boton de crear publicacion */
-    /* display: none; */
-    z-index: 200;
-    position: relative;
-}
