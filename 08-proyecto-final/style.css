@@ -6,6 +6,7 @@
     --interaction-color:#a89a74;
     --border-color:#363636;
     --font-size: 14px;
+    --hashtag:#708dff;
 }
 
 /* reset basico */
@@ -82,3 +83,49 @@ body{
     font-family: 100;
 }
 
+
+
+
+/* sección de descripción del post que el creador del post le colocó */
+
+.op-post-information{
+    margin-bottom: 10px;
+}
+
+.op-info-container{
+    padding: 14px 16px;
+    display: flex;
+}
+
+/* contenedor flex para hacerlo tipo más como instagram */
+.op-flex-post-details{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+}
+/* contneedor que guardará el username y hace cuanto fue el post*/
+.op-txt-date-container{
+    display: flex;
+    flex-direction: row;
+}
+#op-txt{
+    margin-right: 10px;
+    /* color: var(--text-color); */
+}
+#op-date{
+    color: var(--date-color);
+}
+/* contenedor que guardará la descripción del post y los hashtags del post */
+.op-description-hashtag-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#op-description{
+    /* color: var(--text-color); */
+
+}
+#op-hashtag{
+    color: var(--hashtag);
+    cursor: pointer;
+}
