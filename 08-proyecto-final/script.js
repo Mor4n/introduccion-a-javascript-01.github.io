@@ -94,6 +94,13 @@ comment_form.addEventListener("submit", (e) => {
     delete_comment.setAttribute("class","delete-comment");
     delete_comment.textContent ="Borrar comentario";
 
+    
+    delete_comment.addEventListener("click",()=>{
+        comment_div.remove();
+
+    });
+
+
 
     // cada uno de estos, los anexo a su contenedor
     interaction.appendChild(like);
@@ -116,4 +123,4 @@ comment_form.addEventListener("submit", (e) => {
 
    
 
-})
+});

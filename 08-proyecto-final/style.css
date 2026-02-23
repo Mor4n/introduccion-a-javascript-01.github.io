@@ -62,6 +62,7 @@ body{
     display: flex;
     border-bottom: 1px solid var(--border-color);
     padding: 14px 16px;
+    flex-wrap: wrap;
 
 }
 /* fotos de perfil en general, tanto de comentarios */
@@ -80,6 +81,7 @@ body{
     cursor: pointer;
     font-weight: 600;
     margin-right:10px;
+    overflow-wrap: break-word;
     /* color: var(--text-color); */
 }
 .author-location{
@@ -110,6 +112,7 @@ body{
 .author-data{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .author-date{
     color: var(--date-color);
@@ -124,6 +127,7 @@ body{
 
 .author-text{
     /* color: var(--text-color); */
+    overflow-wrap: anywhere;
 
 }
 .author-hashtags{
@@ -154,4 +158,7 @@ body{
     font-weight: 500;
     margin-right: 5px;
     cursor: pointer;
+}
+.delete-comment{
+    
 }
