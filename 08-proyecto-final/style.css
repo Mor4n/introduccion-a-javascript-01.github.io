@@ -1,6 +1,9 @@
 /* variables */
 :root{
-
+    --background-color:#0c1014;
+    --text-color:#e6f5f5;
+    --date-color:#99a89a;
+    --interaction-color:#a89a74;
 }
 
 /* reset basico */
@@ -10,9 +13,13 @@
     padding: 0;
 }
 
+body{
+    font-family: "Poppins", sans-serif;
+}
 
 
 /* main */
 .main-container{
-    position: absolute;
+
+
 }
