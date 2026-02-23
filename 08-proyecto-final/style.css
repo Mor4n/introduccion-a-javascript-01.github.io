@@ -20,6 +20,42 @@ body{
 
 /* main */
 .main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+   
+}
 
+/* sección general del post que incluye todo el post, desde la imagen del post hasta la sección de comentarios */
 
+.post-section{
+    display: flex;
+    border: 1px solid  var(--interaction-color);
+    max-width: 800px;
+    max-height: 600px;
+}
+
+/* imagen del post */
+.img-div{
+  
+}
+#img-post{
+    width: 450px;
+    height: 600px;
+}
+
+/* contenedor de sección de la derecha de información del post y comentarios */
+.post-information-div{
+
+}
+
+/* información del que publicó el post */
+.op-information{
+    display: flex;
+}
+/* fotos de perfil en general, tanto de comentarios */
+.user-pfp{
+    height: 32px;
+    width: 32px;
 }
