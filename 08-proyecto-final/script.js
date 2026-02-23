@@ -1,7 +1,7 @@
 
 // Variables del dom
 
-const comment_form = document.querySelector("#comment-form")
+const comment_form = document.querySelector(".comment-form")
 const username_input = document.querySelector("#username");
 const content_input = document.querySelector("#content");
 const user_image_input = document.querySelector("#user_image");
@@ -92,7 +92,8 @@ comment_form.addEventListener("submit", (e) => {
     // Botón para borrar comentario
     const delete_comment = document.createElement("button");
     delete_comment.setAttribute("class","delete-comment");
-    delete_comment.textContent ="Borrar comentario";
+    delete_comment.innerHTML = `
+    <i class="fa-solid fa-trash" style="color: rgb(204, 38, 38);"></i>`;
 
     
     delete_comment.addEventListener("click",()=>{

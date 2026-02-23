@@ -77,29 +77,27 @@
 
             </section>
 
-            <section class="interaction-section">
-                <div class="interaction-div">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-regular fa-comment"></i>
-                    <i class="fa-regular fa-paper-plane"></i>
-                </div>
-                
-                <i class="fa-regular fa-bookmark"></i>
-            </section>
-
-            <section class="post-information">
-                <p id="post-likes">0 <span> Me gusta</span></p>
-                <p id="post-date"></p>
-            </section>
+            
 
             <section class="comment-form-section">
 
-                <form id="comment-form">
-                    <input type="text" id="username" placeholder="Ingrese su nombre de usuario aquí">
+                <section class="interaction-section">
+                <div class="interaction-div">
+                    <i class="fa-regular fa-heart interact-icon"></i>
+                    <i class="fa-regular fa-comment interact-icon"></i>
+                    <i class="fa-regular fa-paper-plane interact-icon"></i>
+                </div>
+                
+                <i class="fa-regular fa-bookmark"></i>
+                  </section>
 
-                    <input type="text" id="user_image" placeholder="Ingrese el URL de su imagen">
 
-                    <textarea id="content" placeholder="Agrega un comentario..."></textarea>
+                <form class="comment-form">
+                    <input type="text" class="comment-input" id="username" placeholder="Ingrese su nombre de usuario aquí">
+
+                    <input type="text" class="comment-input" id="user_image" placeholder="Ingrese el URL de su imagen">
+
+                    <textarea class="comment-input" id="content" placeholder="Agrega un comentario..."></textarea>
 
                     <button type="submit" id="submit-btn">
                         Publicar

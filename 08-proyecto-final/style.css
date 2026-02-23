@@ -3,7 +3,8 @@
     --background-color:#0c1014;
     --text-color:#e6f5f5;
     --date-color:#99a89a;
-    --interaction-color:#a89a74;
+    --interaction-color:#A8A8A8;
+    --input-text-color:#a8a887;
     --border-color:#363636;
     --font-size: 14px;
     --hashtag:#708dff;
@@ -51,9 +52,12 @@ body{
 
 /* contenedor de sección de la derecha de información del post y comentarios */
 .post-body{
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column; 
+    height: 600px;
 
+    color: var(--text-color);
+    background-color: var(--background-color);
 
 }
 
@@ -139,7 +143,8 @@ body{
 /* sección de comentarios */
 
 .comments-section{
-
+    flex: 1;
+    overflow-y: auto;
 }
 
 .comments-container{
@@ -160,5 +165,40 @@ body{
     cursor: pointer;
 }
 .delete-comment{
-    
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+
+
+/* esto para que los inputs se queden hasta abajo del contenedor */
+.comment-form-section{
+    margin-top: auto;
+}
+/* iconos de me gusta, comentario, enviar... */
+.interaction-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+.interact-icon{
+    cursor: pointer;
+}
+
+/* formulario de inputs */
+.comment-form{
+    display: flex;
+    flex-direction: column;
+}
+.comment-input{
+    background-color: var(--background-color);
+    color: var(--input-text-color);
+    padding-left: 5px;
+    margin-bottom: 5px;
+    height: 30px;
+    border: none;
+    font-family: "Poppins", sans-serif;
 }
