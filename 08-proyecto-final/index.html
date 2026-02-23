@@ -9,14 +9,46 @@
 <body>
     
     <!-- Menu de navegacion -->
-    <nav class="nav-bar">
-        <h1>Proyecto final módulo 1</h1>
-        <button class="create-post-button">Crear post</button>
-    </nav>
 
     <main class="main-container">
 
-        <!-- Formulario para crear un post, lo voy a tener oculto por defecto -->
+
+        <section class="post-section">
+
+            <div class="img-div">
+                <img id="img-post" alt="Imagen de perrito">
+            </div>
+
+            <section class="op-information">
+                <img id="op-pfp-img" alt="Imagen de perfil de creador del post">
+                <p id="op-txt">Mor4n</p>
+                <p id="location-txt">Agua Prieta, Sonora</p>
+            </section>
+
+            <section class="op-post-information">
+                <img id="op-pfp-img" alt="Imagen de perfil de creador del post">
+                <p id="op-txt">Mor4n</p>
+                <p id="op-description">Hoy fue un muy bonito dia</p>
+                <p id="op-hashtag">#fyp #perrito #olaaaaa</p>
+                <p id="op-date">1 d</p>
+            </section>
+
+
+        
+        <section class="comments-section">
+
+            <section class="comments-container">
+
+            </section>
+
+
+        </section>
+
+            
+        </section>
+
+
+     
         <section class="post-form-section">
             <h2>Crear Publicación</h2>
 
@@ -32,20 +64,10 @@
                     placeholder="Ingrese el contenido"
                 ></textarea>
 
-                <button type="submit" id="submitBtn">
+                <button type="submit" id="submit-btn">
                     Publicar
                 </button>
             </form>
-        </section>
-
-        <!-- Contenedor general donde pondre las publicaciones -->
-        <section class="posts-section">
-            <h2>Publicaciones</h2>
-
-            <div id="posts-container">
-                
-            </div>
-
         </section>
     </main>
 
