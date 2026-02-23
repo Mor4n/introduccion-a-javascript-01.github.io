@@ -17,7 +17,7 @@ comment_form.addEventListener("submit", (e) => {
     
     // creo el elemento contenedor del comentario
     const comment_div = document.createElement("div");
-    comment_div.classList.add("comment-div");
+    comment_div.classList.add("author");
     
     // Creo elemento de imagen de pfp
     const profile_pic = document.createElement("img");
@@ -26,14 +26,36 @@ comment_form.addEventListener("submit", (e) => {
 
     // creo otro elemento contenedor para el nombre de usuario y el comentario
     const comment_information = document.createElement("div");
-    comment_information.classList.add("comment-information-div");
+    comment_information.classList.add("comment-flex-div");
+
+
+    // creo otro elemento para almacenar el nombre y la fecha
+    const username_date_container  = document.createElement("div");
+    username_date_container.classList.add("op-txt-date-container");
+
+    // creo otro elemento para almacenar el comentario
+    const comment_description_container = document.createElement("div");
+    comment_description_container.classList.add("comment-description-container");
+
+
 
     // creo otro elemento para el nombre de perfil
     const comment_username = document.createElement("p");
-    comment_username.classList.add("comment-username")
-
+    comment_username.classList.add("op-txt")
+    
     // Le añado el valor del input
     comment_username.textContent = username_input.value;
+
+    // fecha
+    const date_time = document.createElement("p");
+    date_time.setAttribute("class","op-date");
+    date_time.textContent = new Date().toLocaleString();
+
+    // el nombre de usuario y fecha los guardaré en su contenedor
+    username_date_container.appendChild(comment_username);
+    username_date_container.appendChild(date_time);
+
+
 
     // creo otro elemento para la descripción
     const comment_content = document.createElement("p");
@@ -44,12 +66,7 @@ comment_form.addEventListener("submit", (e) => {
     const comment_details = document.createElement("div");
     comment_details.classList.add("comment-details");
 
-    // En este contenedor meteré la fecha
-
-    const date_time = document.createElement("p");
-    date_time.setAttribute("class","date_time");
-    date_time.textContent = new Date().toLocaleString();
-
+    
     // Indicador de like
     const like = document.createElement("p");
     like.setAttribute("class", "interaction");
