@@ -77,6 +77,7 @@ body{
     line-height: 16px;
 }
 .author-name{
+    cursor: pointer;
     font-weight: 600;
     margin-right:10px;
     /* color: var(--text-color); */
@@ -143,4 +144,14 @@ body{
 /* contenedor del comentario de forma individual */
 .comment-div{
 
+}
+/* sección de interactuar con el comentario */
+.comment-interaction{
+    display: flex;
+}
+.interaction{
+    color: var(--interaction-color);
+    font-weight: 500;
+    margin-right: 5px;
+    cursor: pointer;
 }

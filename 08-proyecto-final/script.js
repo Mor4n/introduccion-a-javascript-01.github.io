@@ -21,50 +21,62 @@ comment_form.addEventListener("submit", (e) => {
     
     // Creo elemento de imagen de pfp
     const profile_pic = document.createElement("img");
-    profile_pic.classList.add("user-pfp");
+    profile_pic.classList.add("author-avatar");
     profile_pic.setAttribute("src",user_image_input.value || "https://avatars.githubusercontent.com/u/61915148?v=4");
 
-    // creo otro elemento contenedor para el nombre de usuario y el comentario
-    const comment_information = document.createElement("div");
-    comment_information.classList.add("comment-flex-div");
+    //! anexo la foto de perfil al contenedor principal
+    comment_div.appendChild(profile_pic); // Meto profile pic al contenedor padre del comentario
+
+
+    // creo otro elemento contenedor para el nombre de usuario y el comentario completo
+    const author_body = document.createElement("div");
+    author_body.classList.add("author-body");
 
 
     // creo otro elemento para almacenar el nombre y la fecha
-    const username_date_container  = document.createElement("div");
-    username_date_container.classList.add("op-txt-date-container");
+    const author_data  = document.createElement("div");
+    author_data.classList.add("author-data");
 
-    // creo otro elemento para almacenar el comentario
-    const comment_description_container = document.createElement("div");
-    comment_description_container.classList.add("comment-description-container");
-
-
-
+    
     // creo otro elemento para el nombre de perfil
     const comment_username = document.createElement("p");
-    comment_username.classList.add("op-txt")
+    comment_username.classList.add("author-name")
     
     // Le añado el valor del input
     comment_username.textContent = username_input.value;
 
     // fecha
     const date_time = document.createElement("p");
-    date_time.setAttribute("class","op-date");
+    date_time.setAttribute("class","author-date");
     date_time.textContent = new Date().toLocaleString();
+    
+    //! Anexo nombre y fecha a su contenedor
 
-    // el nombre de usuario y fecha los guardaré en su contenedor
-    username_date_container.appendChild(comment_username);
-    username_date_container.appendChild(date_time);
+    author_data.appendChild(comment_username);
+    author_data.appendChild(date_time);
+    
 
+    // creo otro contenedor para almacenar el comentario
+    const author_content = document.createElement("div");
+    author_content.classList.add("author-content");
 
-
-    // creo otro elemento para la descripción
     const comment_content = document.createElement("p");
-    comment_content.classList.add("comment-content");
+    comment_content.classList.add("author-text")
+    
+    // Le añado el valor del input
     comment_content.textContent = content_input.value;
 
-    // creo un último contenedor para guardar detalles del comentario en especifico
-    const comment_details = document.createElement("div");
-    comment_details.classList.add("comment-details");
+    // ! anexo el conteniedo del comentairo a su contenedor
+    author_content.appendChild(comment_content);
+
+    //! Anexo ambos contenedores a su contenedor padre
+
+    author_body.appendChild(author_data);//Anexo el data
+    author_body.appendChild(author_content);// anexo el content
+
+    //? creo un último contenedor para guardar interacción del comentario en especifico  (aunque no funcionará)
+    const interaction = document.createElement("div");
+    interaction.classList.add("comment-interaction");
 
     
     // Indicador de like
@@ -72,7 +84,7 @@ comment_form.addEventListener("submit", (e) => {
     like.setAttribute("class", "interaction");
     like.textContent = "Me gusta";
 
-    // indicador de responder, aunque estos ultimos 2 son solo visuales
+    // indicador de responder, aunque este y like solo son visuales
     const reply = document.createElement("p");
     reply.setAttribute("class","interaction");
     reply.textContent ="Responder";
@@ -82,29 +94,26 @@ comment_form.addEventListener("submit", (e) => {
     delete_comment.setAttribute("class","delete-comment");
     delete_comment.textContent ="Borrar comentario";
 
-    // Anexos:
 
-    comment_div.appendChild(profile_pic); // Meto profile pic al contenedor padre del comentario
+    // cada uno de estos, los anexo a su contenedor
+    interaction.appendChild(like);
+    interaction.appendChild(reply);
+    interaction.appendChild(delete_comment);
 
-    comment_information.appendChild(comment_username); // El contenedor del nombre de usuario y el comentario, le anexo el nombre de usuario y la descripción
-    comment_information.appendChild(comment_content); 
 
-    // Este contenedor lo anexaré a su vez al contenedor padre del comentario
-    comment_div.appendChild(comment_information);
+    // Anexo el cuerpo del comentario a su contenedor principal
+    comment_div.appendChild(author_body);
 
-    /// anexo los detalles de un comentairo a su contenedor, guardaré en este la fecha, likes, responder y borrar comentario
+    // anexo el contenedor de interacción con el contenedor principal
+    author_body.appendChild(interaction); 
 
-    comment_details.appendChild(date_time);
-    comment_details.appendChild(like);
-    comment_details.appendChild(reply);
-    comment_details.appendChild(delete_comment);
-
-    // por último, este lo anexo al contenedor padre
-
-    comment_div.appendChild(comment_details);
-
+    
     // Este comentario lo guardaré en su contenedor original del html, donde estará junto a los otros comentarios
     comments_container.appendChild(comment_div);
 
+
+    
+
+   
 
 })
