@@ -20,6 +20,7 @@
 body{
     font-family: "Poppins", sans-serif;
     font-size: var(--font-size);
+    background-color: var(--background-color);
 }
 
 
@@ -28,7 +29,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 80px;
+    padding-top: 8%;
+    
    
 }
 

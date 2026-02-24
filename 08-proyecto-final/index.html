@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto final - Caja de comentarios</title>
     <link rel="stylesheet" href="style.css">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/4c1a0d118c.js" crossorigin="anonymous"></script>
 
 </head>
@@ -27,83 +29,87 @@
             <div class="post-image">
                 <img class="post-img" alt="Imagen de perrito" src="./img/img1.jpg">
             </div>
-            
+
             <div class="post-body">
                 <!-- Información del que lo publicó que va en la parte superior -->
-            <section class="post-header">
-                <img src="https://avatars.githubusercontent.com/u/61915148?v=4"  class="author-avatar" id="op-pfp-img" alt="Imagen de perfil de creador del post">
-                <div class="author-info">
-                    <p class="author-name">Mor4n</p>
-                    <p class="author-location">Agua Prieta</p>
-                </div>
-
-            </section>
-
-
-
-            <!-- Descripción del post -->
-            <section class="op-post-information">
-                
-                <div class="author">  
-                    
-                    <img src="https://avatars.githubusercontent.com/u/61915148?v=4" class="author-avatar" id="op-pfp-img" alt="Imagen de perfil de creador del post">
-                
-                    <div class="author-body">
-
-                        <div class="author-data">
-                            <p class="author-name">Mor4n</p>
-                            <p class="author-date">1 d</p>
-                        </div>
-
-                         <div class="author-content">
-                         <p class="author-text">Hoy fue un muy bonito dia</p>
-                        <p class="author-hashtags">#fyp #perrito #olaaaaa</p>
+                <section class="post-header">
+                    <img src="https://avatars.githubusercontent.com/u/61915148?v=4" class="author-avatar"
+                        id="op-pfp-img" alt="Imagen de perfil de creador del post">
+                    <div class="author-info">
+                        <p class="author-name">Mor4n</p>
+                        <p class="author-location">Agua Prieta</p>
                     </div>
-                    </div>
-
-                </div>
-                    
-
-            </section>
-
-
-            <!-- Sección de comentarios -->
-            <section class="comments-section">
-
-                <section class="comments-container">
 
                 </section>
 
 
-            </section>
 
-            
+                <!-- Descripción del post -->
+                <section class="op-post-information">
 
-            <section class="comment-form-section">
+                    <div class="author">
 
-                <section class="interaction-section">
-                <div class="interaction-div">
-                    <i class="fa-regular fa-heart interact-icon"></i>
-                    <i class="fa-regular fa-comment interact-icon"></i>
-                    <i class="fa-regular fa-paper-plane interact-icon"></i>
-                </div>
-                
-                <i class="fa-regular fa-bookmark"></i>
-                  </section>
+                        <img src="https://avatars.githubusercontent.com/u/61915148?v=4" class="author-avatar"
+                            id="op-pfp-img" alt="Imagen de perfil de creador del post">
+
+                        <div class="author-body">
+
+                            <div class="author-data">
+                                <p class="author-name">Mor4n</p>
+                                <p class="author-date">1 d</p>
+                            </div>
+
+                            <div class="author-content">
+                                <p class="author-text">Hoy fue un muy bonito dia</p>
+                                <p class="author-hashtags">#fyp #perrito #olaaaaa</p>
+                            </div>
+                        </div>
+
+                    </div>
 
 
-                <form class="comment-form">
-                    <input type="text" class="comment-input" id="username" placeholder="Ingrese su nombre de usuario aquí">
+                </section>
 
-                    <input type="text" class="comment-input" id="user_image" placeholder="Ingrese el URL de su imagen">
 
-                    <textarea class="comment-input" id="content" placeholder="Agrega un comentario..."></textarea>
+                <!-- Sección de comentarios -->
+                <section class="comments-section">
 
-                    <button type="submit" id="submit-btn">
-                        Publicar
-                    </button>
-                </form>
-            </section>
+                    <section class="comments-container">
+
+                    </section>
+
+
+                </section>
+
+
+
+                <section class="comment-form-section">
+
+                    <section class="interaction-section">
+                        <div class="interaction-div">
+                            <i class="fa-regular fa-heart interact-icon"></i>
+                            <i class="fa-regular fa-comment interact-icon"></i>
+                            <i class="fa-regular fa-paper-plane interact-icon"></i>
+                        </div>
+
+                        <i class="fa-regular fa-bookmark"></i>
+                    </section>
+
+
+                    <form class="comment-form">
+                        <input type="text" class="comment-input" id="username"
+                            placeholder="Ingrese su nombre de usuario aquí">
+
+                        <input type="text" class="comment-input" id="user_image"
+                            placeholder="Ingrese el URL de su imagen">
+
+                        <textarea class="comment-input" id="content" placeholder="Agrega un comentario..."></textarea>
+
+                        <button type="submit" id="submit-btn">
+                            Publicar
+                        </button>
+                    </form>
+                </section>
 
 
             </div>
