@@ -10,7 +10,6 @@ const comments_container = document.querySelector(".comments-container");
 
 // arreglo para guardar comments
 let comments = [];
-
 // comment es el nuevo comentario a crear, el cual es un objeto con nombre de usuario, foto de perfil, contenido del comentario y fecha
 const create_comment = (comment) =>{
     // creo el elemento contenedor del comentario
@@ -46,7 +45,7 @@ const create_comment = (comment) =>{
     // fecha
     const date_time = document.createElement("p");
     date_time.setAttribute("class","author-date");
-    date_time.textContent = new Date().toLocaleString();
+    date_time.textContent = comment.date;
     
     //! Anexo nombre y fecha a su contenedor
 
@@ -95,7 +94,12 @@ const create_comment = (comment) =>{
 
     
     delete_comment.addEventListener("click",()=>{
-        comment_div.remove();
+        comment_div.remove(); // lo quito del DOM el comentario al que di clic
+
+        // creo un nuevo array comentarios, el cual tendrá todos los comentarios menos el que quiero eliminar
+        comments = comments.filter(array_comment => array_comment.id !== comment.id); 
+        // convierto el nuevo array a string y lo guardo en el local storage, así al recargar la página el comentario eliminado no aparecerá
+        localStorage.setItem("comments", JSON.stringify(comments));
 
     });
 
@@ -127,8 +131,9 @@ comment_form.addEventListener("submit", (e) => {
     e.preventDefault();
     // console.log(username.value,content.value);
     
-    // creo el objeto del nuevo comentario con los valores de los inputs más el valor de la fecha
+    // creo el objeto del nuevo comentario con los valores de los inputs más el valor de la fecha y un id con un numero aleatorio entre 0 y 10000 para identificarlo al borrarlo
     const new_comment = {
+        id: Math.floor(Math.random() * 10001),
         username: username_input.value,
         content: content_input.value,
         profilepic: user_image_input.value,
@@ -148,7 +153,7 @@ comment_form.addEventListener("submit", (e) => {
 
 });
 
-// cargar comentairos al cargar la pagina como vimos en clase
+// cargar comentarios al cargar la pagina como vimos en clase
 comments = JSON.parse(localStorage.getItem("comments")) || [];
 // creo cada comentario
 for (let i = 0; i < comments.length; i++) {
