@@ -88,7 +88,7 @@ body{
     cursor: pointer;
     font-weight: 600;
     margin-right:10px;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
     /* color: var(--text-color); */
 }
 .author-location{

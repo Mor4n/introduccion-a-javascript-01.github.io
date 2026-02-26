@@ -8,13 +8,11 @@ const user_image_input = document.querySelector("#user_image");
 const comments_container = document.querySelector(".comments-container");
 // const submit_button = document.querySelector("#submit-btn");
 
-// Event listener del formulario
+// arreglo para guardar comments
+let comments = [];
 
-comment_form.addEventListener("submit", (e) => {
-
-    e.preventDefault();
-    // console.log(username.value,content.value);
-    
+// comment es el nuevo comentario a crear, el cual es un objeto con nombre de usuario, foto de perfil, contenido del comentario y fecha
+const create_comment = (comment) =>{
     // creo el elemento contenedor del comentario
     const comment_div = document.createElement("div");
     comment_div.classList.add("author");
@@ -22,7 +20,7 @@ comment_form.addEventListener("submit", (e) => {
     // Creo elemento de imagen de pfp
     const profile_pic = document.createElement("img");
     profile_pic.classList.add("author-avatar");
-    profile_pic.setAttribute("src",user_image_input.value || "https://avatars.githubusercontent.com/u/61915148?v=4");
+    profile_pic.setAttribute("src",comment.profilepic || "https://avatars.githubusercontent.com/u/61915148?v=4");
 
     //! anexo la foto de perfil al contenedor principal
     comment_div.appendChild(profile_pic); // Meto profile pic al contenedor padre del comentario
@@ -43,7 +41,7 @@ comment_form.addEventListener("submit", (e) => {
     comment_username.classList.add("author-name")
     
     // Le añado el valor del input
-    comment_username.textContent = username_input.value;
+    comment_username.textContent = comment.username;
 
     // fecha
     const date_time = document.createElement("p");
@@ -64,7 +62,7 @@ comment_form.addEventListener("submit", (e) => {
     comment_content.classList.add("author-text")
     
     // Le añado el valor del input
-    comment_content.textContent = content_input.value;
+    comment_content.textContent = comment.content;
 
     // ! anexo el conteniedo del comentairo a su contenedor
     author_content.appendChild(comment_content);
@@ -119,9 +117,40 @@ comment_form.addEventListener("submit", (e) => {
     // Este comentario lo guardaré en su contenedor original del html, donde estará junto a los otros comentarios
     comments_container.appendChild(comment_div);
 
+}
 
+
+// Event listener del formulario
+
+comment_form.addEventListener("submit", (e) => {
+
+    e.preventDefault();
+    // console.log(username.value,content.value);
     
+    // creo el objeto del nuevo comentario con los valores de los inputs más el valor de la fecha
+    const new_comment = {
+        username: username_input.value,
+        content: content_input.value,
+        profilepic: user_image_input.value,
+        date: new Date().toLocaleString()
+    }
+
+    // lo añado al arreglo de comentarios el objeto del nuevo comentario
+    comments.push(new_comment);
+
+    // lo pongo en el local storage
+    localStorage.setItem("comments", JSON.stringify(comments));
+
+    // creo el comentario en el dom
+    create_comment(new_comment);
 
    
 
 });
+
+// cargar comentairos al cargar la pagina como vimos en clase
+comments = JSON.parse(localStorage.getItem("comments")) || [];
+// creo cada comentario
+for (let i = 0; i < comments.length; i++) {
+    create_comment(comments[i]);
+}
