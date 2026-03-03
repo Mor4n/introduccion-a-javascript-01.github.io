@@ -85,7 +85,7 @@ const generate_password = (length, uppercase,lowercase, number,  symbol) =>{
     if(!uppercase && !lowercase && !number && !symbol){
         return "Por favor, seleccione al menos una opción para brindarle una contraseña";
     }
-    else if (length>8){
+    else if (length<8){
         return "Por favor, seleccione una longitud superior o igual a 8";
     }
     // Empiezo la generación de la contraseña
